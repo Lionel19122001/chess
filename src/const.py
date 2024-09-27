@@ -1,17 +1,18 @@
 #screen dimensions
-WIDTH = 800
+WIDTH = 600
 HEIGHT = 600
 SIDE_RECT_WIDTH = 5
+
 
 
 # Board dimensions
 ROWS = 8
 COLS = 8
-SQUARE_SIZE = HEIGHT // ROWS
+SQUARE_SIZE = WIDTH // ROWS
 
 
-GRID_SIZE = 8  # Bàn cờ 8x8
-CELL_SIZE = WIDTH // GRID_SIZE
+FRAME_WIDTH = 60  # Độ dày của viền (để hiển thị chữ)
+FONT_SIZE = 20 
 
 # Color
 WHITE = (255, 255, 255)
