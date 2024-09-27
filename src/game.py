@@ -3,14 +3,15 @@ import pygame
 from const import *
 from board import Board
 from square import Square
+from dragger import Dragger
 
 
 class Game:
     def __init__(self):
         self.board = Board()
-    
+        self.dragger = Dragger()
    
-    # Show Methods
+    # blit Methods
     def show_bg(self, surface):
          # Vẽ chữ trên viền
         letters = 'ABCDEFGH'  # Chữ cho hàng ngang
@@ -59,7 +60,10 @@ class Game:
                     img_center = col * SQUARE_SIZE + FRAME_WIDTH + SQUARE_SIZE // 2 ,row * SQUARE_SIZE + FRAME_WIDTH + SQUARE_SIZE // 2
                     piece.texture_rect = img.get_rect(center=img_center)
                     surface.blit(img, piece.texture_rect)
-            
+                    
+
+                   
+       
                 
                 
                 

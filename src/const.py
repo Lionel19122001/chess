@@ -8,6 +8,7 @@ SIDE_RECT_WIDTH = 5
 # Board dimensions
 ROWS = 8
 COLS = 8
+SQSIZE = WIDTH // ROWS
 SQUARE_SIZE = WIDTH // ROWS
 
 
