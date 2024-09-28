@@ -17,7 +17,7 @@ class Dragger:
 
     def update_blit(self, surface):
         #texture
-        self.piece.set_texture(size=128)
+        self.piece.set_texture(size =128)
         texture = self.piece.texture
         #img
         img=pygame.image.load(texture)
@@ -31,8 +31,8 @@ class Dragger:
         self.mouseX, self.mouseY = pos # (xcor, ycor)
 
     def save_initial(self, pos):
-        self.initial_row = pos[1] //SQSIZE
-        self.initial_col = pos[0] //SQSIZE
+        self.initial_row = pos[1] // SQSIZE
+        self.initial_col = pos[0] // SQSIZE
 
     def drag_piece(self, piece):
         self.piece = piece

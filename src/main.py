@@ -30,7 +30,12 @@ class Main:
         
         while True:
             game.show_bg(screen)
+            
             game.show_pieces(screen)
+            
+            
+            if dragger.dragging:
+                dragger.update_blit(screen)
 
           
             
@@ -42,11 +47,11 @@ class Main:
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     dragger.update_mouse(event.pos)
                     
-                
-                    clicked_row = dragger.mouseY // SQUARE_SIZE 
-                    clicked_col = dragger.mouseX// SQUARE_SIZE 
 
-                    #print(dragger.mouseY, clicked_row)
+                    clicked_row = dragger.mouseY // SQSIZE -1
+                    clicked_col = dragger.mouseX // SQSIZE -1
+
+                    # print(dragger.mouseY, clicked_row)
                     # print(dragger.mouseX, clicked_col)
 
                     # if clicked square has a piece ?
@@ -57,6 +62,7 @@ class Main:
 
                 #mouse motion
                 elif event.type == pygame.MOUSEBUTTONDOWN:
+                    
                     if dragger.dragging:
                         dragger.update_mouse(event.pos)
                         dragger.update_blit(screen)
